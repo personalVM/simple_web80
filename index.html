@@ -56,20 +56,23 @@
       position: relative;
       display: inline-block;
     }
+    
     .dropdown > a {
       display: flex;
       align-items: center;
       gap: 0.3rem;
     }
+    
     .dropdown > a::after {
       content: '▼';
       font-size: 0.8rem;
       transform: translateY(1px);
     }
+    
     .dropdown-content {
       display: none;
       position: absolute;
-      top: 120%;
+      top: 105%;
       left: 0;
       background-color: rgba(0, 0, 0, 0.9);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -77,20 +80,16 @@
       padding: 0.5rem 0;
       min-width: 150px;
       z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
     }
-    .dropdown-content a {
-      color: #f5f5f5;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
+    
+    .dropdown:hover .dropdown-content,
+    .dropdown-content:hover {
       display: block;
-      border-radius: 3px;
-    }
-    .dropdown-content a:hover {
-      background: #00d4ff;
-      color: #1c1c2b;
-    }
-    .dropdown:hover .dropdown-content {
-      display: block;
+      opacity: 1;
+      visibility: visible;
     }
 
     header {
@@ -146,12 +145,10 @@
       <a href="index.html">Projects (WIP)</a>
       <a href="index.html">Blog (WIP)</a>
       <div class="dropdown">
-        <a href="#">Publications</a>
+        <a href="#">Discory Search Engines</a>
         <div class="dropdown-content">
-          <a href="#ai">AI</a>
-          <a href="#economics">Economics</a>
-          <a href="#data-science">Data Science</a>
-          <a href="gwr-discovery-search.html">GWR Discovery Search</a>
+          <a href="#ms-thesis">Ms Thesis</a>
+          <a href="#gwr-discovery">GWR Discovery</a>
         </div>
       </div>
       <a href="about.html">About</a>
