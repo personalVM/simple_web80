@@ -14,9 +14,88 @@
       background: linear-gradient(135deg, #1c1c2b, #3c4161);
       color: #f5f5f5;
     }
+
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.85);
+      padding: 0.8rem 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #00d4ff;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #f5f5f5;
+      padding: 0.5rem 1rem;
+      font-weight: 500;
+      transition: background 0.3s, color 0.3s;
+      border-radius: 5px;
+    }
+    .nav-links a:hover {
+      background: #00d4ff;
+      color: #1c1c2b;
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown > a {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .dropdown > a::after {
+      content: '▼';
+      font-size: 0.8rem;
+      transform: translateY(1px);
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 120%;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+      padding: 0.5rem 0;
+      min-width: 150px;
+      z-index: 1000;
+    }
+    .dropdown-content a {
+      color: #f5f5f5;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      display: block;
+      border-radius: 3px;
+    }
+    .dropdown-content a:hover {
+      background: #00d4ff;
+      color: #1c1c2b;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
     header {
       text-align: center;
-      padding: 2rem;
+      padding: 2rem 1rem;
       background: rgba(0, 0, 0, 0.5);
     }
     header h1 {
@@ -28,86 +107,60 @@
       font-size: 1.2rem;
       color: #ccc;
     }
+
     .container {
       max-width: 1200px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
-    .intro {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-    .intro p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-    }
-    .articles {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-    .article {
-      background: #2c2f45;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .article:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
-    }
-    .article h2 {
-      font-size: 1.5rem;
-      margin: 0;
-      color: #00d4ff;
-    }
-    .article p {
-      font-size: 1rem;
-      color: #ccc;
-      margin: 0.5rem 0 1rem;
-    }
-    .article a {
-      text-decoration: none;
-      color: #00d4ff;
-      font-weight: bold;
-    }
-    .widget-container {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    #searchWidgetTrigger {
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      border: 1px solid #00d4ff;
-      border-radius: 5px;
-      background: #2c2f45;
-      color: #f5f5f5;
-      cursor: pointer;
-    }
-    #searchWidgetTrigger:hover {
-      background: #00d4ff;
-      color: #1c1c2b;
-    }
+
+    /* Footer */
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 1.5rem 1rem;
       background: rgba(0, 0, 0, 0.7);
-      margin-top: 3rem;
+      color: #ccc;
     }
     footer p {
       font-size: 0.9rem;
-      color: #ccc;
+      margin: 0;
+    }
+    footer p a {
+      color: #00d4ff;
+      text-decoration: none;
+    }
+    footer p a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html" class="logo">Virtual Guigo</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <div class="dropdown">
+        <a href="#">Topics</a>
+        <div class="dropdown-content">
+          <a href="#ai">AI</a>
+          <a href="#economics">Economics</a>
+          <a href="#data-science">Data Science</a>
+          <a href="#climate-change">Climate Change</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
   <header>
-    <h1>Welcome to My Virtual Self5</h1>
+    <h1>Welcome to My Virtual Self</h1>
     <p>Guilherme's AI agent, here to introduce himself and share topics he cares about.</p>
   </header>
   
+  <!-- Main Content -->
   <div class="container">
     <section class="intro">
       <p>
@@ -116,118 +169,14 @@
       </p>
     </section>
 
-    <!-- Search Widget Section -->
-    <div class="widget-container">
-      <h2>Ask Questions to my Virtual Self!</h2>
-      <p>Curious about the topics I explore? Ask me anything below:</p>
-      <input placeholder="Type here..." id="searchWidgetTrigger" />
-      <!-- Widget JavaScript bundle -->
-      <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_GB"></script>
-      <!-- Search widget element -->
-      <gen-search-widget
-        configId="d99462de-2187-4485-9c75-b4c430425731"
-        triggerId="searchWidgetTrigger">
-      </gen-search-widget>
-    </br>
-    </div>
-
-    <section class="intro">
-      <p></p>
-    </section>
-
     <section class="articles">
-
-      <!-- Article -->
-      <div class="article">
-        <h2>Exploring the Future of AI</h2>
-        <p>"Artificial Intelligence holds the promise to redefine human progress, bridging creativity and computation to solve society's most complex challenges."</p>
-        <a href="https://example.com/article1" target="_blank">Read More</a>
-      </div>
-      
-      <!-- Article -->
-      <div class="article">
-        <h2>Econometrics: Data Meets Economics</h2>
-        <p>"Econometrics empowers us to decode economic behaviors through data, providing clarity on policy impacts and market dynamics in an ever-changing world."</p>
-        <a href="https://example.com/econometrics" target="_blank">Read More</a>
-      </div>
-      
-      <!-- Article -->
-      <div class="article">
-        <h2>Data Science in Action</h2>
-        <p>"Data science is not just a discipline—it's a lens through which we understand patterns, predict the future, and make informed decisions across industries."</p>
-        <a href="https://example.com/datascience" target="_blank">Read More</a>
-      </div>
-      
-      <!-- Article -->
-      <div class="article">
-        <h2>Climate Change Solutions</h2>
-        <p>"From renewable energy to AI-driven conservation, the fight against climate change demands innovative technologies and global collaboration."</p>
-        <a href="https://example.com/article3" target="_blank">Read More</a>
-      </div>
-      
-      <!-- Article -->
-      <div class="article">
-        <h2>Blockchain Beyond Cryptocurrency</h2>
-        <p>"Blockchain technology transcends finance, offering transformative solutions for transparency and security in sectors like healthcare and supply chains."</p>
-        <a href="https://example.com/article4" target="_blank">Read More</a>
-      </div>
-      
-      <!-- Article -->
-      <div class="article">
-        <h2>Understanding Voluntary Migration</h2>
-        <p>"Voluntary migration reflects human aspirations for better opportunities, but it also reveals the socio-economic forces shaping global mobility."</p>
-        <a href="https://example.com/migration" target="_blank">Read More</a>
-      </div>
-      
-      <!-- Article -->
-      <div class="article">
-        <h2>The Rise of Cloud Computing</h2>
-        <p>"Cloud computing is the backbone of modern innovation, enabling scalable solutions and democratizing access to powerful technologies."</p>
-        <a href="https://example.com/cloudcomputing" target="_blank">Read More</a>
-      </div>
-      
-      <!-- Article -->
-      <div class="article">
-        <h2>Promoting Social Equality</h2>
-        <p>"Achieving social equality requires a fusion of innovative policies, inclusive growth, and persistent efforts to dismantle systemic barriers."</p>
-        <a href="https://example.com/socialequality" target="_blank">Read More</a>
-      </div>
-      
-      <!-- Article -->
-      <div class="article">
-        <h2>Finding Optimal Solutions</h2>
-        <p>"Optimization bridges the gap between constraints and possibilities, guiding decisions in fields ranging from logistics to public policy."</p>
-        <a href="https://example.com/optimalsolutions" target="_blank">Read More</a>
-      </div>
-      
-      <!-- Article -->
-      <div class="article">
-        <h2>The Ethics of Artificial Intelligence</h2>
-        <p>"As AI evolves, we must confront its ethical dimensions, ensuring technologies align with human values and safeguard societal well-being."</p>
-        <a href="https://example.com/aithics" target="_blank">Read More</a>
-      </div>
-      
-      <!-- Article -->
-      <div class="article">
-        <h2>Behavioral Economics: The Psychology of Decision-Making</h2>
-        <p>"Behavioral economics reveals the intricacies of human decision-making, blending psychology and economics to challenge traditional models."</p>
-        <a href="https://example.com/behavioraleconomics" target="_blank">Read More</a>
-      </div>
-
-
+      <!-- Articles Section Placeholder -->
+      <p style="text-align: center; color: #ccc;">(Your articles go here!)</p>
     </section>
-
   </div>
 
-  <nav>
-    <a href="./index.html">Home</a>
-    <a href="./about.html">About</a>
-    <a href="./service.html">Service</a>
-    <a href="./contact.html">Contact</a>
-  </nav>
-
   <footer>
-    <p>offered with ❤️ by Guilherme himself and his virtual self</p>
+    <p>Offered with ❤️ by <a href="#">Guilherme</a> and his virtual self.</p>
   </footer>
 </body>
 </html>
