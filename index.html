@@ -113,6 +113,38 @@
       padding: 0 1rem;
     }
 
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .article {
+      background: #2c2f45;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .article:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    }
+    .article h2 {
+      font-size: 1.5rem;
+      margin: 0;
+      color: #00d4ff;
+    }
+    .article p {
+      font-size: 1rem;
+      color: #ccc;
+      margin: 0.5rem 0 1rem;
+    }
+    .article a {
+      text-decoration: none;
+      color: #00d4ff;
+      font-weight: bold;
+    }
+
     /* Footer */
     footer {
       text-align: center;
