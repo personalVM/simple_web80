@@ -163,6 +163,20 @@
     footer p a:hover {
       text-decoration: underline;
     }
+
+    .shiny-text {
+      font-size: 24px;
+      color: #00d4ff; /* Blue color */
+      text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff, 0 0 15px #00d4ff;
+      animation: shine 1.5s infinite; 
+    }
+
+    @keyframes shine {
+      0% { text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff, 0 0 15px #00d4ff; }
+      50% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff; }
+      100% { text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff, 0 0 15px #00d4ff; }
+    }
+
   </style>
 </head>
 <body>
@@ -205,12 +219,12 @@
       <div class="article">
         <h2>GWR Discovery Search Engine</h2>
         <p>"Explore a diverse range of Geographically Weighted Regression models with the GWR Discovery Search Engine app. Find the best fit for your research with generative explanations, from standard GWR to advanced variants, all powered by Google Cloud Platform."</p>
-        <a href="gwr-discovery-search.html" target="_blank">Read More</a>
+        <a class="shiny-text" href="gwr-discovery-search.html" target="_blank">Read More</a>
       </div>
       <div class="article">
         <h2>Ms Thesis Discovery Search Engine</h2>
         <p>"Discover and connect with key research findings related to Guilherme's Masters thesis, and its references, on voluntary migration driven by economic opportunities through a custom LxM-powered search engine."</p>
-        <a href="ms-discovery-search.html" target="_blank">Read More</a>
+        <a class="shiny-text" href="ms-discovery-search.html" target="_blank">Read More</a>
       </div>
       <div class="article">
         <h2>Exploring the Future of AI</h2>
