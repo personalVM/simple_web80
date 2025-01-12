@@ -173,6 +173,19 @@
       100% { text-shadow: 0 0 1px #00d4ff, 0 0 8px #00d4ff, 0 0 13px #00d4ff; }
     }
 
+    .search-widget-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem; /* Add some margin for spacing */
+    }
+
+    .search-widget-container input {
+        flex: 1; /* Allow input to fill available space */
+        padding: 0.5rem;
+        border: 1px solid #ccc; /* Add a border */
+        border-radius: 4px; /* Add rounded corners */
+    }
+
   </style>
 </head>
 <body>
@@ -199,8 +212,8 @@
   </nav>
 
   <header>
-    <h1>Welcome to Guilherme's Portfolio</h1>
-    <p>Here he shares his work and studies, aiming to contribute to a smarteer world.</p>
+    <h1>Welcome to GWR Discovery Search Engine</h1>
+    <p>A generative search engine (powered by Gemini 1.5 Pro) designed to help researchers easily understand and explore the diverse family of Geographically Weighted Regression (GWR) models.</p>
   </header>
   
   <div class="container">
@@ -211,71 +224,13 @@
     </section>
 
     <section class="articles">
-      <div class="article">
-        <h2>GWR Discovery Search Engine</h2>
-        <p>"Explore a diverse range of Geographically Weighted Regression models with the GWR Discovery Search Engine (v0.2). Find the best fit for your research with generative explanations, from standard GWR to advanced variants, all powered by Google Cloud Platform."</p>
-        <a class="shiny-text" href="gwr-discovery-search.html" target="_blank">Read More</a>
-      </div>
-      <div class="article">
-        <h2>Ms Thesis Discovery Search Engine</h2>
-        <p>"Discover and connect with key research findings related to Guilherme's Masters thesis, and its references, on voluntary migration driven by economic opportunities through a custom LxM-powered search engine (v0.6)."</p>
-        <a class="shiny-text" href="ms-discovery-search.html" target="_blank">Read More</a>
-      </div>
-      <div class="article">
-        <h2>Virtual Guigo</h2>
-        <p>"... (v0.4)"</p>
-        <a class="shiny-text" href="virtual-guigo.html" target="_blank">Read More</a>
-      </div>
-      <div class="article">
-        <h2>Exploring the Future of AI</h2>
-        <p>"Artificial Intelligence holds the promise to redefine human progress, bridging creativity and computation to solve society's most complex challenges."</p>
-        <a href="index.html" target="_blank">Read More (WIP)</a>
-      </div>
-      <div class="article">
-        <h2>Econometrics: Data Meets Economics</h2>
-        <p>"Econometrics empowers us to decode economic behaviors through data, providing clarity on policy impacts and market dynamics in an ever-changing world."</p>
-        <a href="index.html" target="_blank">Read More (WIP)</a>
-      </div>
-      <div class="article">
-        <h2>Data Science in Action</h2>
-        <p>"Data science is not just a discipline—it's a lens through which we understand patterns, predict the future, and make informed decisions across industries."</p>
-        <a href="index.html" target="_blank">Read More (WIP)</a>
-      </div>
-      <div class="article">
-        <h2>Understanding Voluntary Migration</h2>
-        <p>"Voluntary migration reflects human aspirations for better opportunities, but it also reveals the socio-economic forces shaping global mobility."</p>
-        <a href="index.html" target="_blank">Read More (WIP)</a>
-      </div>
-      <div class="article">
-        <h2>Promoting Social Equality</h2>
-        <p>"Achieving social equality requires a fusion of innovative policies, inclusive growth, and persistent efforts to dismantle systemic barriers."</p>
-        <a href="index.html" target="_blank">Read More (WIP)</a>
-      </div>
-      <div class="article">
-        <h2>Finding Optimal Solutions</h2>
-        <p>"Optimization bridges the gap between constraints and possibilities, guiding decisions in fields ranging from logistics to public policy."</p>
-        <a href="index.html" target="_blank">Read More (WIP)</a>
-      </div>
-      <div class="article">
-        <h2>The Rise of Cloud Computing</h2>
-        <p>"Cloud computing is the backbone of modern innovation, enabling scalable solutions and democratizing access to powerful technologies."</p>
-        <a href="index.html" target="_blank">Read More (WIP)</a>
-      </div>
-      <div class="article">
-        <h2>Blockchain Beyond Cryptocurrency</h2>
-        <p>"Blockchain technology transcends finance, offering transformative solutions for transparency and security in sectors like healthcare and supply chains."</p>
-        <a href="index.html" target="_blank">Read More (WIP)</a>
-      </div>
-      <div class="article">
-        <h2>The Ethics of Artificial Intelligence</h2>
-        <p>"As AI evolves, we must confront its ethical dimensions, ensuring technologies align with human values and safeguard societal well-being."</p>
-        <a href="index.html" target="_blank">Read More (WIP)</a>
-      </div>
-      <div class="article">
-        <h2>Behavioral Economics: The Psychology of Decision-Making</h2>
-        <p>"Behavioral economics reveals the intricacies of human decision-making, blending psychology and economics to challenge traditional models."</p>
-        <a href="index.html" target="_blank">Read More (WIP)</a>
-      </div>
+
+        <div class="search-widget-container">
+            <input type="text" placeholder="Search here" id="searchWidgetTrigger" />
+            <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_GB" async></script>
+            <gen-search-widget configId="897b9397-ab04-4550-bc35-5762c97e0004"></gen-search-widget>
+        </div>
+
     </section>
 
   </div>
