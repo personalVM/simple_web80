@@ -212,7 +212,7 @@
   </nav>
 
   <header>
-    <h1>Welcome to GWR Discovery Search Engine</h1>
+    <h1>GWR Discovery Search Engine</h1>
     <p>A generative search engine (powered by Gemini 1.5 Pro) designed to help researchers easily understand and explore the diverse family of Geographically Weighted Regression (GWR) models.</p>
   </header>
   
@@ -228,19 +228,11 @@
         <div class="search-widget-container">
             <input type="text" placeholder="Search here" id="searchWidgetTrigger" />
             <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_GB" async></script>
-            <gen-search-widget configId="897b9397-ab04-4550-bc35-5762c97e0004"></gen-search-widget>
-        </div>
-
-        <!-- Widget JavaScript bundle -->
-        <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_GB"></script>
-        <!-- Search widget element is not visible by default -->
             <gen-search-widget
                 configId="897b9397-ab04-4550-bc35-5762c97e0004"
                 triggerId="searchWidgetTrigger">
             </gen-search-widget>
-
-        <!-- Element that opens the widget on click. It does not have to be an input -->
-        <input placeholder="Search here" id="searchWidgetTrigger" />
+        </div>
 
     </section>
 
